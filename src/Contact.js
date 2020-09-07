@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css";
+import axios from "axios";
 
 class Contact extends React.Component {
     constructor(props) {
@@ -13,7 +14,11 @@ class Contact extends React.Component {
     render() {
         return (
             <div>
-                <form id="contact-form" method="POST">
+                <form
+                    id="contact-form"
+                    onSubmit={this.handleSubmit.bind(this)}
+                    method="POST"
+                >
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input
@@ -55,6 +60,32 @@ class Contact extends React.Component {
         );
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        axios({
+            method: "POST",
+            url: "http://localhost:3002/send",
+            data: this.state,
+        })
+            .then((response) => {
+                if (response.data.status === "success") {
+                    alert("message sent");
+                    this.resetForm();
+                } else if (response.data.status === "fail") {
+                    alert("failed to send the message");
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+    resetForm() {
+        this.setState({
+            name: "",
+            email: "",
+            message: "",
+        });
+    }
     onNameChange(event) {
         this.setState({ name: event.target.value });
     }
