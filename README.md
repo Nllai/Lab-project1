@@ -18,3 +18,12 @@
 
 This document should be updated as the project progresses to include all
 instructions required to run the project.
+
+## Heroku
+Run the following:
+
+`heroku local web`: Use this to run heroku locally.
+
+`heroku open`: Open Heroku app page.
+
+`git push heroku master`: Push to update changes.
