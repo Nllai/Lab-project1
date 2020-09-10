@@ -5,8 +5,8 @@ var cors = require("cors");
 const creds = require("./config");
 
 var transport = {
-    host: "smtp@gmail.com", // Don’t forget to replace with the SMTP host of your provider
-    port: 587,
+    host: "smtp.mailtrap.io", // Don’t forget to replace with the SMTP host of your provider
+    port: 2525,
     auth: {
         user: creds.USER,
         pass: creds.PASS,
@@ -36,8 +36,8 @@ router.post("/send", (req, res, next) => {
 
     var mail = {
         from: name,
-        to: "rubenfangnode@gmail.com", // We need to change this into the customer's email address
-        subject: "New Message from Contact Form",
+        to: "redfern-3522cf@inbox.mailtrap.io", // We need to change this into the customer's email address
+        subject: "New Message from Customers",
         text: content,
     };
     transporter.sendMail(mail, (err, data) => {

@@ -1,12 +1,18 @@
 # Lab-project1
 
 ## Getting Started
+
 ### Initialising the project
-To start the project, clone the repo and run:
+
+1. To start the project, clone the repo and run in terminal:
 
 `npm install`
 
-Run this to start the server:
+2. To start the email server:
+
+`node index`
+
+3. Run this to start the front end, create another terminal and run:
 
 `npm start`
 
