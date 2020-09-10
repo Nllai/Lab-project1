@@ -1,4 +1,4 @@
 module.exports = {
-    USER: "gmail",
-    PASS: "password",
+    USER: "mailtrap_user",
+    PASS: "mailtrap_pass",
 };
