@@ -5,8 +5,8 @@ import logo from "./images/logo.jpg";
 function Nav() {
     return (
         <nav className="navbar">
-            <Link to="/">
-                <img src={logo} alt="logo"></img>
+            <Link to="/" className="logo-container">
+                <img src={logo} alt="logo" className="logo-img" />
                 <span>Healthland Clinic</span>
             </Link>
             <div className="navbar-options">

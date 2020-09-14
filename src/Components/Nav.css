@@ -1,4 +1,19 @@
+.navbar {
+    background-color: whitesmoke;
+}
 .navbar-options > span {
     margin: 5px;
     padding: 5px;
+}
+.logo-container {
+    color: #1fbbe1;
+    font-size: 30px;
+    padding: 5px;
+    margin: 5px;
+}
+.logo-container:hover {
+    text-decoration: none;
+}
+.logo-img {
+    width: 90px;
 }
