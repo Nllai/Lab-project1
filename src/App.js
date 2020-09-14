@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Nav from "./Components/Nav";
 import Contact from "./Components/Contact";
+import landingpageimg from "./Components/images/landingpageimg.jpg";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     </Route>
                     <Route path="/">
                         <Nav />
+                        <img src={landingpageimg} alt="landing_page_img" />
                         <Link to="/contact">Contact us</Link>
                     </Route>
                 </Switch>
