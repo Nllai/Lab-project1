@@ -2,6 +2,7 @@
     background-color: whitesmoke;
 }
 .navbar-options > span {
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
 }
@@ -16,4 +17,25 @@
 }
 .logo-img {
     width: 90px;
+}
+.dropdown > button {
+    font-weight: bold;
+}
+.dropdown-item:hover {
+    background-color: #1fbbe1 !important;
+    color: white !important;
+}
+.book-button {
+    padding: 10px 30px;
+    margin: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(
+        180deg,
+        #c8f78f 0%,
+        #a4d864 35%,
+        #80bb39 100%
+    );
+    border: none;
 }
